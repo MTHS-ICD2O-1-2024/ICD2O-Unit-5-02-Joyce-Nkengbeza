@@ -6,8 +6,6 @@
 
 "use strict"
 
-'use strict'
-
 const positiveRandomNumber = Math.floor(Math.random() * 6) + 1
 const negativeRandomNumber = Math.floor(Math.random() * 6) * -1
 
