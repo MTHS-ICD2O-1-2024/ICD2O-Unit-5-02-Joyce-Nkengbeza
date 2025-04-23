@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Area Of Trapezoid With JS" />
+  <meta name="description" content="Positive or negative #, in JS" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Joyce Nkengbeza" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32new.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16new.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Area of Trapezoid in JS</title>
+  <title>Positive or negative #, in JS</title>
 </head>
 
 <body>
@@ -24,51 +24,40 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Area of Trapezoid in JS</span>
+        <span class="mdl-layout-title">Positive or negative #, in JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="page-content">Area of Trapezoid in JS</div>
-      <img src="./images/trapezoid.svg" />
-      <h3>Formula</h3>
-      <div class="page-content"><h2>A = [(a + b) / 2] x h</h2></div>
-      <div class="page-content">Please enter integers for dimensions</div>
+      <div class="right-image">
+        <img src="./images/positive_negative.jpg" alt="positive or negative number" />
+      </div>
+      <div class="page-content">
+        Select what kind of number you would like
+      </div>
       <br />
       <form>
-        <!-- Numeric Textfield -->
-        <p>A Base:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a-base" /> <span>mm</span>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <!-- Numeric Textfield -->
-        <p>B Base:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b-base" /> <span>mm</span>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <!-- Numeric Textfield -->
-        <p>Height:</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-length" /> <span>mm</span>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
         <br />
-        <!-- Raised button with ripple -->
+        <label classs="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-positive">
+          <input type="radio" id="option-positive" class="mdl-radio__button" name="kind-of-number" value="1" checked />
+          <span class="mdl-radio__label">Positive</span>
+        </label>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-negative">
+          <input type="radio" id="option-negative" class="mdl-radio__button" name="kind-of-number" value="2" />
+          <span class="mdl-radio__label">Negative</span>
+        </label>
+        <br />
+        <br />
+        <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculatearea()" type="button">
-          Calculate
+          onclick="calculate()" type="button">
+          Generate
         </button>
       </form>
       <br />
       <div class="page-content-answer">
-        <div id="area"></div>
+        <div id="results"></div>
       </div>
     </main>
   </div>
 </body>
-
 </html>
